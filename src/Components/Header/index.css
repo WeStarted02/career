@@ -1,0 +1,52 @@
+.logo {
+  font-size: 72px;
+  background: -webkit-linear-gradient(#fff, gray);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+.logo1 {
+  font-size: 72px;
+  background: -webkit-linear-gradient(#fff, rgb(54, 54, 54));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+nav {
+  box-shadow: 0 0 8px 0 #ccc;
+  border-bottom: 2px solid #fff;
+}
+.dark-mode {
+  width: 56px;
+  max-height: 29.5px;
+  padding: 13.5px 0;
+  background-color: #fff;
+  border: 1.4px solid #000;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: relative;
+}
+.toggle-knob {
+  width: 24px;
+  height: 24px;
+  background-color: #f5a623;
+  border-radius: 50%;
+  position: absolute;
+  left: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: left 0.3s, background-color 0.3s;
+}
+
+.dark-mode.toggled {
+  background: #333;
+  border: 1px solid #fff;
+}
+.dark-mode.toggled .toggle-knob {
+  left: 29px;
+  background-color: #ccc;
+}
