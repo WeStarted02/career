@@ -11,7 +11,6 @@ function Filter() {
   const [dropdown, setDropdown] = useState(false);
   const bgColor = useSelector((state) => state.changeBgColor);
   const color = useSelector((state) => state.changeColor);
-  const dispatch = useDispatch();
 
   return (
     <div

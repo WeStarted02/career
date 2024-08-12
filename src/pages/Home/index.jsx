@@ -1,5 +1,5 @@
 import "./index.css";
-import { Header, Filter } from "../../Components";
+import { Header, Filter, Works, Footer } from "../../Components";
 import "../../styles/index.css"
 
 function Home() {
@@ -8,6 +8,10 @@ function Home() {
       <Header />
 
       <Filter />
+
+      <Works />
+
+      <Footer />
     </>
   );
 }

@@ -1,0 +1,55 @@
+.worsListCard{
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    gap: 24px;
+    align-items: start;
+    box-shadow:0 0 4px 0 black;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.worsListCard:hover{
+    transform: scale(1.009);
+}
+.worsListCard .card-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.worsListCard .card-image img{
+    width: 160px;
+    border-radius:12px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 4px 0 black;
+}
+.worsListCard .card-image span{
+    font-size: 18px;
+    font-weight: 600;
+}
+.worsListCard .card-about{
+    display: flex;
+    flex-direction: column;
+    line-height: 0.8;
+}
+.worsListCard .card-about h2{
+    font-size: 36px;
+    font-weight: 700;
+    background: -webkit-linear-gradient(#000, rgb(164, 163, 163));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.worsListCard .card-about h2.h2{
+    background: -webkit-linear-gradient(#333, #fff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;   
+}
+.worsListCard .card-about p{
+    font-size: 20px;
+    font-weight: 700;
+    color: rgba(51, 51, 51, .5);
+}
+.worsListCard .card-about span{
+    font-size: 18px;
+    font-weight: 600;
+}

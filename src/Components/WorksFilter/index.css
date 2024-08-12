@@ -1,0 +1,47 @@
+.worksFilter{
+    width: 30%;
+    padding: 20px;
+    border-radius:12px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.worksFilter h3{
+    display: inline-block;
+    width: 100%;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 4px;
+    text-align: start;
+    padding-left: 8%;
+}
+.filter-work .filter-box{
+    width: 68%;
+    margin-left: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:8px;
+}
+.filter-work .dropdown{
+    width: 68%;
+    left: 8%;
+}
+.list-jobs-type{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 8%;
+
+}
+.list-jobs-type li{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 4px;
+}
+.list-jobs-type li label{
+    font-size: 18px;
+    cursor: pointer;
+}

@@ -1,0 +1,54 @@
+.footer-logo {
+  width: 100%;
+}
+.footer-logo a {
+  display: block;
+  text-align: center;
+  font-size: 56px;
+  background: -webkit-linear-gradient(#ccc, rgb(54, 54, 54));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+.footer-social{
+    border-top: 2px solid #fff;
+}
+.footer-social-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.footer-social-container span{
+    font-size: 20px;
+}
+.footer-social-container .footer-social-icons{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.footer-social-container .footer-social-icons svg{
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.footer-social-container .footer-social-icons svg:hover{
+    transform: scale(1.08);
+}
+.footer-social-container .footer-social-icons .bi-instagram{
+    background: linear-gradient(to right, red, purple);
+    color: white;
+    padding: 4px;
+    border-radius: 8px;
+}
+.footer-social-container .footer-social-icons .bi-youtube{
+    background:red;
+    padding: 4px;
+    border-radius: 4px;
+    color: white;
+}
+.footer-social-container .footer-social-icons .bi-linkedin{
+    color: rgb(0, 85, 255);
+}
