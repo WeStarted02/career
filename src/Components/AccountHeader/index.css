@@ -1,0 +1,38 @@
+.account-header {
+    position: relative;
+    background-image: linear-gradient(to right, #a6a6a6, #ffffff);
+    margin-bottom: 10px;
+}
+
+.btn-account {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding-left: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 10px;
+    border-radius: 12px;
+    background-color: #545454;
+    color: #f4f4f4;
+    border:none;
+}
+.btn-account:hover{
+    transform: scale(1.05)
+}
+.profile-phote {
+    margin-left: 70px;
+    transform: translateY(50%);
+}
+.account-header p{
+    margin-left: 140px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-size: 22px;
+    font-family: "Georgia", "serif"
+}
+.p-mail{
+    color: #737373;
+    transform: translateY(-10px);
+    font-size: 18px !important;
+}

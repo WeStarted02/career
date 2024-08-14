@@ -1,0 +1,119 @@
+.accountBody {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.col-1 {
+    width: 30%;
+}
+
+.col-2 {
+    width: 65%;
+}
+
+.col-2>div {
+    position: relative;
+    border-radius: 15px;
+    padding: 10px;
+    padding-left: 15px !important;
+    background-color: #a6a6a6;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.div-file {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+}
+
+.accountBody button {
+    border: none;
+    border-radius: 15px;
+    background-color: #181818e3;
+    color: #e4e6ea;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+}
+
+.div-file button {
+    background-color: #6ea62e;
+}
+
+li button {
+    background-color: #6ea62e;
+}
+
+.ochiqlama {
+    color: #737373;
+}
+
+.btn-add {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+h2 {
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    font-size: larger;
+}
+
+li div {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.col-1>div {
+    position: relative;
+    display: grid;
+    width: 80%;
+    background-color: #737373;
+    height: 350px;
+    margin: auto;
+    border-radius: 15px;
+}
+.col-1 p{
+   text-align: center;
+   padding-top: 15px;
+   font-size: larger;
+   font-family:"Cursive","Lucida Handwriting"
+}
+.btn-elon {
+    position: absolute; /* Butonun pozisyonunu kapsayıcıya göre ayarlar */
+    bottom: 20px; /* Butonu alttan 20px yukarıda konumlandırır */
+    left: 50%; /* Butonu yatayda ortalar */
+    transform: translateX(-50%); /* Butonu tam ortalamak için */
+    border-radius: 20px !important;
+    width: 60%;
+    height: 40px;
+    background-color: #f8f9fa;
+    color: #00bf63;
+  }
+  .accountBody button:hover{
+    background-image: linear-gradient( to right, #5de0e6, #004aad);
+    color: black;
+  }
+
+  .col-2>div:hover{
+    transform: scale(1.009);
+  }
+
+  @media screen and (max-width: 750px){
+.col-1{
+    display: none !important;
+}
+.col-2{
+    width: 90%;
+    margin: auto;
+}
+  }

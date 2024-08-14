@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import Home from "../pages/Home";
 import "../styles/index.css"
+import AccountPage from "../pages/Account"
 
 function App() {
   const bgColor = useSelector((state) => state.changeBgColor);
@@ -12,7 +13,7 @@ function App() {
   }
   return (
     <>
-      <Home />
+      <AccountPage />
     </>
   );
 }
