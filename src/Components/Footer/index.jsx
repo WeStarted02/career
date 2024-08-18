@@ -6,7 +6,7 @@ function Footer() {
   const color = useSelector((state) => state.changeColor);
   
   return (
-    <div className="footer" style={bgColor == "black" ? {background:"#333"} : {background:"#d9d9d9"}}>
+    <div className="footer" style={bgColor == "black" ? {background:"#333"} : {background:"#008ccc"}}>
       <div className="footer-logo container">
         <a
           href="/"
@@ -22,7 +22,7 @@ function Footer() {
       </div>
       <div className="footer-social">
         <div className="container footer-social-container">
-          <span style={{color}}>Privacy Policy</span>
+          <span>Privacy Policy</span>
           <div className="d-flex footer-social-icons">
             <a href="#">
               <svg
@@ -61,7 +61,7 @@ function Footer() {
               </svg>
             </a>
           </div>
-          <span style={{color}}>WeStarted</span>
+          <span>WeStarted</span>
         </div>
       </div>
     </div>

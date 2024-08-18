@@ -19,11 +19,11 @@ function WorksFilter() {
     >
       {/* city vs country  */}
       <div className="d-flex flex-column gap-2 align-items-center justify-content-center">
-        <h3 style={{ color}}>Shahar\Davlat</h3>
+        <h3 style={{ color }}>Shahar\Davlat</h3>
         {/* City */}
         <div className="position-relative filter-work w-100">
           <div className="filter-box">
-            <span style={{ color }}>Shahar</span>
+            <span style={{ color: "#008ccc" }}>Shahar</span>
             {!dropdownCity ? (
               <img
                 src={city}
@@ -66,7 +66,7 @@ function WorksFilter() {
         {/* Country */}
         <div className="position-relative filter-work w-100">
           <div className="filter-box">
-            <span style={{ color }}>Davlat</span>
+            <span style={{ color: "#008ccc" }}>Davlat</span>
             {!dropdownCountry ? (
               <img
                 src={city}
@@ -212,19 +212,13 @@ function WorksFilter() {
       {/* Search loading */}
       <div className="position-relative filter-work">
         <div className="filter-box">
-          <span style={{ color }}>Qidirasizmi?</span>
+          <span style={{ color: "#008ccc" }}>Qidirasizmi?</span>
           {!dropdown ? (
             <div
               className="loader"
-              style={
-                color == "white"
-                  ? {
-                      background: "conic-gradient(#0000 10%, #fff) content-box",
-                    }
-                  : {
-                      background: "conic-gradient(#0000 10%, #000) content-box",
-                    }
-              }
+              style={{
+                background: "conic-gradient(#0000 10%,#008ccc') content-box",
+              }}
               onClick={() => {
                 setDropdown(!dropdown);
               }}

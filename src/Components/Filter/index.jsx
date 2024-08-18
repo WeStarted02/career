@@ -1,7 +1,7 @@
 import "./index.css";
 import city from "../../assets/city.svg";
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 function Filter() {
   const [modalSearch, setModalSearch] = useState(false);
@@ -24,7 +24,7 @@ function Filter() {
       <div className="container d-flex gap-4 justify-content-center">
         {/* Search */}
         <div className="filter-box search">
-          <span style={{color}}>Search</span>
+          <span>Search</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -42,7 +42,7 @@ function Filter() {
         {/* City */}
         <div className="position-relative">
           <div className="filter-box">
-            <span style={{color}}>Shahar</span>
+            <span>Shahar</span>
             {!dropdownCity ? (
               <img
                 src={city}
@@ -72,7 +72,7 @@ function Filter() {
           </div>
           {/* DROPDOWN */}
           {dropdownCity && (
-            <div style={{color}} className="dropdown position-absolute">
+            <div className="dropdown position-absolute">
               <ul>
                 <li>New York</li>
                 <li>London</li>
@@ -85,7 +85,7 @@ function Filter() {
         {/* Work Type */}
         <div className="position-relative">
           <div className="filter-box">
-            <span style={{color}}>Ish turi</span>
+            <span>Ish turi</span>
             {!dropdownJobs ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -126,7 +126,7 @@ function Filter() {
           </div>
           {/* DROPDOWN */}
           {dropdownJobs && (
-            <div style={{color}} className="dropdown position-absolute">
+            <div className="dropdown position-absolute">
               <ul>
                 <li>Remote</li>
                 <li>Half office</li>
@@ -138,7 +138,7 @@ function Filter() {
         {/* Annotations Historiya */}
         <div className="position-relative">
           <div className="filter-box">
-            <span style={{color}}>E'lon tarixi</span>
+            <span>E'lon tarixi</span>
             {!dropdownHistoria ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -179,7 +179,7 @@ function Filter() {
           </div>
           {/* DROPDOWN */}
           {dropdownHistoria && (
-            <div style={{color}} className="dropdown position-absolute">
+            <div className="dropdown position-absolute">
               <ul>
                 <li>Last 1 day</li>
                 <li>Last 1 week</li>
@@ -192,21 +192,10 @@ function Filter() {
         {/* Search loading */}
         <div className="position-relative">
           <div className="filter-box">
-            <span style={{ color }}>Qidirasizmi?</span>
+            <span>Qidirasizmi?</span>
             {!dropdown ? (
               <div
                 className="loader"
-                style={
-                  color == "white"
-                    ? {
-                        background:
-                          "conic-gradient(#0000 10%, #fff) content-box",
-                      }
-                    : {
-                        background:
-                          "conic-gradient(#0000 10%, #000) content-box",
-                      }
-                }
                 onClick={() => {
                   setDropdown(!dropdown);
                 }}
@@ -230,7 +219,7 @@ function Filter() {
           </div>
           {/* DROPDOWN */}
           {dropdown && (
-            <div style={{ color }} className="dropdown position-absolute">
+            <div className="dropdown position-absolute">
               <ul>
                 <li>Last 1 day</li>
                 <li>Last 1 week</li>

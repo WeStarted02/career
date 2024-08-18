@@ -2,7 +2,9 @@ import Footer from "../../Components/Footer";
 import AccountBody from "../../Components/AccountBody";
 import Header from "../../Components/Header";
 import AccountHeader from "../../Components/AccountHeader";
+
 function AccountPage() {
+    
     return (
         <div>
             <Header></Header>
@@ -12,4 +14,4 @@ function AccountPage() {
         </div>
     )
 }
-export default AccountPage
+export default AccountPage;

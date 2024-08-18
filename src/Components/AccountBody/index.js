@@ -3,11 +3,13 @@ import './index.css'
 
 function AccountBody() {
     const bgColor = useSelector((state) => state.changeBgColor);
+    const color = useSelector((state) => state.changeColor);
+    
     return (
         <div className='accountBody' >
             <div className='col-1'   >
-                <div style={bgColor == "black" ? {background:"#d9d9d9"} : {background:"#737373"}}>
-                    <p>Bugun sening kuning!</p>
+                <div style={bgColor == "black" ? {background:"#333"} : {background:"#d9d9d9"}}>
+                    <p style={{color}}>Bugun sening kuning!</p>
                     <button className='btn-elon'>E'lonlar</button>
                 </div>
             </div>

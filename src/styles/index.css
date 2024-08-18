@@ -7,6 +7,29 @@
   font-family: "Inter", sans-serif;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  background:#fff;
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c7c7c7; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(109, 109, 109); 
+}
+
 @media screen and (max-width: 1200px) {
   .works-responsive {
     gap: 4% !important;
@@ -44,6 +67,9 @@
   }
   .worksFilter {
     width: 30%;
+  }
+  .WorksList{
+    gap: 10px;
   }
   .filter-work .filter-box {
     margin-left: 8px;
@@ -106,6 +132,9 @@
   .footer-social-container .footer-social-icons svg{
       width: 28px;
       height: 28px;
+  }
+  .works-responsive{
+    height: 704px;
   }
 }
 
@@ -225,6 +254,9 @@
 .footer-social-container .footer-social-icons .bi-youtube{
     padding: 3px;
 }
+.works-responsive{
+  height: 632px;
+}
 }
 
 @media screen and (max-width: 640px) {
@@ -304,6 +336,9 @@
   .worsListCard .card-about h2 {
     font-size: 18px;
   }
+  .works-responsive{
+    height: 570px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -343,9 +378,6 @@
   }
   .worksFilter{
     width: 50%;
-  }
-  .WorksList{
-    gap: 10px;
   }
   /* Works Card */
   .worsListCard {
@@ -401,5 +433,8 @@
   .footer-social-container .footer-social-icons .bi-youtube{
     padding: 2px;
     border-radius:4px;
+  }
+  .works-responsive{
+    height: 504px;
   }
 }

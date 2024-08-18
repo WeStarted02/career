@@ -25,6 +25,24 @@ export const worksList = [
         stafka:"Yarim stafkali",
         actionType:"Offline"
     },
+    
+    {
+        id:12,
+        title:"Ui/Ux designer",
+        company:"Saidoff academy",
+        image:career,
+        stafka:"Yarim stafkali",
+        actionType:"Masofaviy"
+    },
+    {
+        id:21,
+        title:"Ui/Ux designer",
+        company:"Saidoff academy",
+        image:career,
+        stafka:"Yarim stafkali",
+        actionType:"Masofaviy"
+    },
+
     {
         id:4,
         title:"Ui/Ux designer",
