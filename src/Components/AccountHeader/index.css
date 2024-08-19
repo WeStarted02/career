@@ -1,38 +1,77 @@
 .account-header {
-    position: relative;
-    background-image: linear-gradient(to right, #a6a6a6, #ffffff);
-    margin-bottom: 10px;
+  background-image: linear-gradient(to right, #a6a6a6, #ffffff);
+  margin-bottom: 20px;
 }
-
+.account-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+.account-container .account-user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.account-container .account-user svg {
+  width: 64px;
+  color: #008ccc;
+  height: 64px;
+}
+.account-username {
+  line-height: 0.4;
+  margin-top: 4px;
+}
+.account-username h3 {
+  font-weight: 500;
+  font-size: 24px;
+}
+.account-username p {
+  font-weight: 500;
+  opacity: 0.8;
+  font-size: 16px;
+}
 .btn-account {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    padding-left: 10px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-right: 10px;
-    border-radius: 12px;
-    background-color: #545454;
-    color: #f4f4f4;
-    border:none;
+  padding: 6px 24px;
+  border-radius: 12px;
+  background-color: #fff;
+  color: #008ccc;
+  border: 2px solid #008ccc;
+  transition: all 1s;
+  cursor: pointer;
 }
 .btn-account:hover{
-    transform: scale(1.05)
+    background-image: linear-gradient( to right, #5de0e6, #004aad);
+    color: white;
 }
-.profile-phote {
-    margin-left: 70px;
-    transform: translateY(50%);
+.btn-account:active{
+    background-color: #006898;
 }
-.account-header p{
-    margin-left: 140px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    font-size: 22px;
-    font-family: "Georgia", "serif"
-}
-.p-mail{
-    color: #737373;
-    transform: translateY(-10px);
-    font-size: 18px !important;
+
+@media screen and (max-width:768px) {
+  .account-container .account-user svg{
+    width: 48px;
+    height: 48px;
+  }
+  .account-container .account-user{
+    gap: 10px;
+  }
+  .account-username {
+    line-height: 0.2;
+    margin-top: 6px;
+  }
+  .account-username h3 {
+    font-size: 18px;
+  }
+  .account-username p {
+    font-size: 12px;
+  }
+  .btn-account {
+    padding: 2px 10px;
+    font-size: 14px;
+    border-radius:8px;
+  }
+  .account-container{
+    height: 80px;
+  }
 }

@@ -1,10 +1,12 @@
 .WorksList {
-  width: calc(60% - 20px);
+  width: calc(70% - 20px);
   display: flex;
   flex-direction: column;
   gap: 20px;
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-right: 4px;
+  padding-top: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
 }

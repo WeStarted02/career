@@ -13,42 +13,54 @@
 
 .col-2>div {
     position: relative;
-    border-radius: 15px;
+    border-radius:8px;
     padding: 10px;
     padding-left: 15px !important;
     background-color: #d9d9d9;
     margin-top: 20px;
     width: 100%;
+    box-shadow: 0px 0px 4px 2px rgba(34, 60, 80, 0.2);
+}
+
+.col-2>div:first-child{
+    margin: 0;
 }
 
 .div-file {
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 8px;
     background-color: #f8f9fa;
 }
 
 .accountBody button {
-    border: none;
-    border-radius: 15px;
-    background-color: #181818e3;
-    color: #e4e6ea;
+    border-radius:8px;
+    color: #008ccc;
+    background:#fff;
+    border:2px solid #008ccc;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 3px;
     padding-bottom: 3px;
-
+    transition: all 0.5s;
 }
 
 .div-file button {
-    background-color: #6ea62e;
+    background-color: #008ccc;
+    color: white;
 }
 
 li button {
-    background-color: #6ea62e;
+    background-color: #008ccc;
+    color: white;
+}
+.li-div button {
+    background-color: #008ccc;
+    color: white;
 }
 
 .ochiqlama {
     color: #737373;
+    margin-top: 20px !important;
 }
 
 .btn-add {
@@ -74,13 +86,15 @@ ul {
 }
 
 .col-1>div {
-    position: relative;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 80%;
     background-color: #737373;
     height: 350px;
     margin: auto;
-    border-radius: 15px;
+    border-radius:8px;
+    box-shadow: 0px 0px 4px 2px rgba(34, 60, 80, 0.2);
 }
 .col-1 p{
    text-align: center;
@@ -88,27 +102,28 @@ ul {
    font-size: larger;
    font-family:"Cursive","Lucida Handwriting"
 }
-.btn-elon {
-    position: absolute; /* Butonun pozisyonunu kapsayıcıya göre ayarlar */
-    bottom: 20px; /* Butonu alttan 20px yukarıda konumlandırır */
-    left: 50%; /* Butonu yatayda ortalar */
-    transform: translateX(-50%); /* Butonu tam ortalamak için */
-    border-radius: 20px !important;
-    width: 60%;
-    height: 40px;
-    background-color: #f8f9fa;
-    color: #00bf63;
+.col-1 .btn-elon {
+    display: inline-block;
+    color: #008ccc;
+    background:#fff;
+    border:2px solid #008ccc;
+    width: 80%;
+    padding: 6px 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    transition: all 0.5s;
   }
   .accountBody button:hover{
     background-image: linear-gradient( to right, #5de0e6, #004aad);
-    color: black;
+    color: white;
   }
 
   .col-2>div:hover{
     transform: scale(1.009);
   }
 
-  @media screen and (max-width: 750px){
+  @media screen and (max-width: 992px){
 .col-1{
     display: none !important;
 }
@@ -116,4 +131,20 @@ ul {
     width: 90%;
     margin: auto;
 }
+  }
+
+  @media screen and (max-width:768px) {
+    .accountBody {
+        margin-bottom: 12px;
+    }
+    .col-2 p,button{
+        font-size: 14px;
+    }
+    .col-2 h2{
+        font-size: 18px;
+    }
+    .col-2 {
+        width: 90%;
+    }
+    
   }
