@@ -13,7 +13,7 @@ function WorksFilter() {
   return (
     <div
       style={
-        bgColor == "black" ? { background: "#333" } : { background: "#d9d9d9" }
+        bgColor == "black" ? { background: "#333" } : { background: "#fff" }
       }
       className="worksFilter"
     >

@@ -9,7 +9,7 @@ function WorksListCard({title, stafka, company, image, actionType}) {
     <div
       className="worsListCard"
       style={
-        bgColor == "black" ? { background: "#333" } : { background: "#d9d9d9" }
+        bgColor == "black" ? { background: "#333" } : { background: "#fff" }
       }
     >
       <section className="card-image">

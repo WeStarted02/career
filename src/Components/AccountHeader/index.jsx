@@ -3,9 +3,10 @@ import "./index.css";
 
 function AccountHeader() {
   const bgColor = useSelector((state) => state.changeBgColor);
+  const color = useSelector((state) => state.changeColor);
 
   return (
-    <div className="account-header ">
+    <div style={bgColor == "black" ? {background:"linear-gradient(to top, #333, #5f5f5f)"} : {background:"linear-gradient(to top right, #e0e0e0, #fff)"}} className="account-header ">
       <div className="container account-container">
       <div className="account-user">
         <svg
@@ -21,8 +22,8 @@ function AccountHeader() {
           />
         </svg>
         <div className="account-username">
-          <h3>Davronbek</h3>
-          <p className="p-mail">Davronbek@gmail.com</p>
+          <h3 style={{color}}>Davronbek</h3>
+          <p style={{color}} className="p-mail">Davronbek@gmail.com</p>
         </div>
       </div>
       <button style={bgColor == "black" ? {background:"#f0efef"} : {background:"#fff"}} className="btn-account">Tuzatish</button>

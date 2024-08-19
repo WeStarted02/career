@@ -21,13 +21,13 @@
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #c7c7c7; 
+  background: #dbdbdb; 
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(109, 109, 109); 
+  background: rgb(169, 169, 169); 
 }
 
 @media screen and (max-width: 1200px) {

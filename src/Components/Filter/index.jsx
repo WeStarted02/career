@@ -17,8 +17,8 @@ function Filter() {
       className="filter-bg position-relative d-flex justify-content-center"
       style={
         bgColor == "black"
-          ? { background: "#4d4d4d" }
-          : { background: "#d9d9d9" }
+          ? { background: "#333" }
+          : { background: "#fff" }
       }
     >
       <div className="container d-flex gap-4 justify-content-center">

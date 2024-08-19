@@ -1,5 +1,4 @@
 .account-header {
-  background-image: linear-gradient(to right, #a6a6a6, #ffffff);
   margin-bottom: 20px;
 }
 .account-container {
@@ -23,11 +22,9 @@
   margin-top: 4px;
 }
 .account-username h3 {
-  font-weight: 500;
   font-size: 24px;
 }
 .account-username p {
-  font-weight: 500;
   opacity: 0.8;
   font-size: 16px;
 }

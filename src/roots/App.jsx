@@ -10,7 +10,7 @@ function App() {
   if (bgColor == "black") {
     document.getElementById('body').style.background = '#797878'
   } else {
-    document.getElementById('body').style.background = '#e7e7e7'
+    document.getElementById('body').style.background = '#fff'
   }
   return (
     <>
