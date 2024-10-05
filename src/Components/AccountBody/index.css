@@ -116,7 +116,7 @@ ul {
   }
   .accountBody button:hover{
     background-image: linear-gradient( to right, #5de0e6, #004aad);
-    color: white;
+    color: rgb(12, 12, 12);
   }
 
   .col-2>div:hover{

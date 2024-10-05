@@ -1,0 +1,22 @@
+.addWorkForm {
+    padding: 25px;
+}
+
+.addWorkForm div {
+    margin-top: 8px;
+}
+
+.addWorkForm .dropdownA {
+    display: flex;
+}
+
+.addWorkForm  p {
+    margin-bottom: 0px;
+    margin-left: 10px;
+    align-self: center;
+}
+
+.addWorkForm h1{
+    width: 200px;
+    margin: auto;
+}

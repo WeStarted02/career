@@ -34,9 +34,9 @@
   .works-responsive {
     gap: 4% !important;
   }
-  .WorksList {
+  /*.WorksList {
     width: 66%;
-  }
+  }*/
 }
 
 @media screen and (max-width: 992px) {

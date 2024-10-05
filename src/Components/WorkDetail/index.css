@@ -1,0 +1,26 @@
+.workDetail img{
+    height: 70px;
+    width: 55pt;
+    border-radius: 50%;
+}
+.workDetail>div{
+    margin-top: 20px;
+    display: flex;
+    align-content: center;
+}
+.workDetail div>div{
+    align-self: center;
+    margin-left: 10px;
+}
+.workDetail div>h2{
+    align-self: center;
+    margin-bottom: 0px;
+}
+.workDetail .jobName{
+    margin-top: 10px;
+}
+.workDetail .aboutJob{
+    margin-right: 15px;
+    border: 2px solid rgb(23, 22, 22);
+    padding: 8px;
+}

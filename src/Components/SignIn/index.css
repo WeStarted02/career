@@ -1,0 +1,35 @@
+.signIn{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+.signIn>div{
+    margin: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 30px;
+}
+.signIn>div>div{
+    padding: 20px;
+}
+.signIn>img{
+    padding: 80px;
+}
+.signIn label{
+    margin-top: 5px;
+}
+.signIn a{
+    margin-top: 8px;
+    text-decoration: none;
+}
+.signIn button{
+    margin-top: 18px;
+    margin-left: 18px;
+    margin-right: 18px;
+}
+.form-check input{
+    margin-top: 8px;
+}
+a>p{
+    margin-bottom: 0px !important;
+}
