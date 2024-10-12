@@ -1,3 +1,11 @@
 .row-2 .col1{
    height: 600px;
 }
+@media  screen and (max-width:612px){
+   .row-2 .col1{
+      display: none;
+   }
+   .row-2 .col_2{
+      padding: 25px;
+   }
+}

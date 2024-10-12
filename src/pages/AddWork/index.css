@@ -1,3 +1,10 @@
 .row .col-right{
   height: 600px;
 }
+
+@media screen and (max-width:720px) {
+  .row .col-right{
+    display: none;
+  }
+
+}

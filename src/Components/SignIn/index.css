@@ -1,35 +1,58 @@
-.signIn{
+.signIn {
     display: flex;
     height: 100vh;
     width: 100vw;
 }
-.signIn>div{
+
+.signIn>div {
     margin: 30px;
     margin-top: auto;
     margin-bottom: auto;
     padding: 30px;
 }
-.signIn>div>div{
+
+.signIn>div>div {
     padding: 20px;
 }
-.signIn>img{
+
+.signIn>img {
     padding: 80px;
 }
-.signIn label{
+
+.signIn label {
     margin-top: 5px;
 }
-.signIn a{
+
+.signIn a {
     margin-top: 8px;
     text-decoration: none;
 }
-.signIn button{
+
+.signIn button {
     margin-top: 18px;
     margin-left: 18px;
     margin-right: 18px;
 }
-.form-check input{
+
+.form-check input {
     margin-top: 8px;
 }
-a>p{
+
+a>p {
     margin-bottom: 0px !important;
+}
+
+@media screen and (max-width:975px) {
+    .signIn>div {
+        width: 70%;
+        margin: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        padding: 30px;
+    }
+
+    .signIn>img {
+        display: none;
+    }
+
 }

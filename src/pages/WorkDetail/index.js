@@ -13,7 +13,7 @@ function WorkDetailPage() {
                 <Col className="col1">
                     <WorksList />
                 </Col>
-                <Col>
+                <Col className="col_2">
                     <WorkDeatil />
                 </Col>
             </Row>

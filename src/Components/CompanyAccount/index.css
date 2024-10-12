@@ -54,9 +54,9 @@
 .col2 .h22 {
     translate: 20px -25px;
     width: max-content;
-    background-color:rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
     border-radius: 20px 20px 3px 3px;
-    border: 2px  rgb(255, 255, 255) solid;
+    border: 2px rgb(255, 255, 255) solid;
     padding: 8px;
 }
 
@@ -90,6 +90,56 @@
     background-color: #0d6efd;
     color: white;
 }
-.col1 ul li{
+
+.col1 ul li {
     margin-top: 5px;
+}
+
+@media screen and (min-width:1100px) {
+    .companyAcc .col1 {
+        display: grid;
+        width: 20%;
+        margin-left: 10px;
+        padding-right: 15px;
+        margin-bottom: auto;
+    }
+
+    .col2 button {
+        width: 160px;
+        height: 30px;
+        right: 0px;
+        translate: 50% -45px;
+        margin-left: 60%;
+        border-radius: 5px;
+        background-color: #0d6efd;
+        color: white;
+    }
+
+}
+
+@media screen and (max-width:1100px) {
+    .col2 button {
+        width: 160px;
+        height: 30px;
+        right: 0px;
+        translate: 50% -45px;
+        margin-left: 10%;
+        border-radius: 5px;
+        background-color: #0d6efd;
+        color: white;
+    }
+
+    .companyAcc .col2 {
+        border-left: none;
+        padding-right: 20px;
+        width: 100vw;
+    }
+
+    .companyAcc .col1 {
+        display: none;
+        width: 20%;
+        margin-left: 10px;
+        padding-right: 15px;
+        margin-bottom: auto;
+    }
 }
