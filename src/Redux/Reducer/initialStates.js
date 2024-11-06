@@ -1,4 +1,6 @@
 export default {
     bg_color:"white",
-    color:"black"
+    color:"black",
+    workId:null,
+    userId:null
 }

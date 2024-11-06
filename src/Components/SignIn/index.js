@@ -3,14 +3,16 @@ import "./index.css";
 import { Container, Row } from "reactstrap";
 import img from "../../Images/Sign.png";
 import { useState, useEffect } from "react";
+import axios from "axios";
+import {  useDispatch } from 'react-redux';
+import { userId } from '../../Redux/Actions/actions';
 
 function SignIn() {
-
 
     const [height, setHeight] = useState();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
-
+    const dispatch = useDispatch();
 
     const seePassword = () => {
         const typeInput = document.getElementById("passwordInput").type;
@@ -26,8 +28,29 @@ function SignIn() {
     })
 
     const login = async () => {
-
+        const params = {
+            email: email
+        };
+        
+        axios({
+            method: 'get',
+            url: 'http://localhost:8080/signIn',
+            params: params,
+            responseType: 'json'
+        })
+        .then(function (response) {
+            if(response.data[0].password == password){
+                dispatch(userId(response.data[0].id));
+                window.location.href="account"
+            }
+        })
+        .catch(function (error) {
+            console.error('Error fetching data:', error);
+        });
+        
     }
+
+
 
     return (
         <div className="signIn">

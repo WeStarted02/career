@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import "./index.css";
 
-function AccountHeader() {
+function AccountHeader({name, email}) {
   const bgColor = useSelector((state) => state.changeBgColor);
   const color = useSelector((state) => state.changeColor);
 
@@ -22,8 +22,8 @@ function AccountHeader() {
           />
         </svg>
         <div className="account-username">
-          <h3 style={{color}}>Davronbek</h3>
-          <p style={{color}} className="p-mail">Davronbek@gmail.com</p>
+          <h3 style={{color}}>{name}</h3>
+          <p style={{color}} className="p-mail">{email}</p>
         </div>
       </div>
       <button style={bgColor == "black" ? {background:"#f0efef"} : {background:"#fff"}} className="btn-account">Tuzatish</button>

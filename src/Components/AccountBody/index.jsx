@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import "./index.css";
 
-function AccountBody() {
+function AccountBody({about}) {
   const bgColor = useSelector((state) => state.changeBgColor);
   const color = useSelector((state) => state.changeColor);
 
@@ -88,8 +88,9 @@ function AccountBody() {
           >
             <h2 style={{ color }}>O’zim haqimda</h2>
             <p className="ochiqlama">
-              Bu bo’limda oz’zingizni anglatuvchi qisqa va tushunarli matn
-              kiriting{" "}
+              {about}
+              {/*Bu bo’limda oz’zingizni anglatuvchi qisqa va tushunarli matn
+              kiriting{" "}*/}
             </p>
             <div
               style={

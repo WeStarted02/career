@@ -28,3 +28,15 @@ export function changeColorToWhite() {
         payload:initialState.bg_color
     }
 }
+export function getWorkId(id) {
+    return {
+        type:actionTypes.GET_WORK_ID,
+        payload:id
+    }
+}
+export function userId(id) {
+    return {
+        type:actionTypes.USER_ID,
+        payload:id
+    }
+}
