@@ -40,3 +40,9 @@ export function userId(id) {
         payload:id
     }
 }
+export function workList(id) {
+    return {
+        type:actionTypes.WORK_LIST,
+        payload:id
+    }
+}

@@ -4,3 +4,4 @@ export const CHANGE_COLOR_TO_DARK = "CHANGE_COLOR_TO_DARK";
 export const CHANGE_COLOR_TO_WHITE = "CHANGE_COLOR_TO_WHITE";
 export const GET_WORK_ID = "GET_WORK_ID";
 export const USER_ID = "USER_ID";
+export const WORK_LIST = "WORK_LIST";

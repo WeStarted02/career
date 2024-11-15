@@ -1,16 +1,82 @@
 import "./index.css";
 import city from "../../assets/city.svg";
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import axios from "axios";
+import career from '../../Images/work.png';
+import { workList } from "../../Redux/Actions/actions";
+
+const cities = [
+  "Andijon viloyati", "Buxoro viloyati", "Fargʻona viloyati",
+  "Jizzax viloyati", "Xorazm viloyati", "Namangan viloyati", "Navoiy viloyati",
+  "Qashqadaryo viloyati", "Samarqand viloyati", "Sirdaryo viloyati",
+  "Surxondaryo viloyati", "Toshkent viloyati", "Nukus Shahri"
+];
+
+const jobTypes = [
+  "Masofaviy", "Yarim Masofoviy", "Ofisdan"
+];
+
+const histDates = [
+  "Oxirgi 1 kun", "Oxirgi 1 hafta", "Oxirgi 1 oy", "Oxirgi 1 yil"
+];
 
 function Filter() {
+
   const [modalSearch, setModalSearch] = useState(false);
   const [dropdownCity, setDropdownCity] = useState(false);
   const [dropdownJobs, setDropdownJobs] = useState(false);
   const [dropdownHistoria, setDropdownHistoria] = useState(false);
   const [dropdown, setDropdown] = useState(false);
+
   const bgColor = useSelector((state) => state.changeBgColor);
   const color = useSelector((state) => state.changeColor);
+
+  const [shahar, setShahar] = useState("Shahar");
+  const [ishTuru, setIsh] = useState("Ish turi");
+  const [elonTarihi, setElonTarihi] = useState("E'lon tarihi");
+  const [jobName, setJobname] = useState("Search");
+
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    const params = {
+      id: null,
+      company_id: null,
+      salary: null,
+      location: (shahar == "Shahar") ? null : shahar,
+      job_name: (jobName == "Search") ? null : jobName,
+      working_time: null, //burayi tarihe ayarlaman lazim
+      typeof_working: (ishTuru == "Ish turi") ? null : ishTuru,
+      to_announce_time: null,
+      work_about: null
+    };
+
+    axios({
+      method: 'get',
+      url: 'http://localhost:8080/getAnnounceById/filter',
+      responseType: "json",
+      params: params
+    }).then(function (response) {
+      const dataArray = response.data;
+      const filteredList = dataArray.map(item => ({
+        id: item.id,
+        title: item.job_name,
+        company: "Westarted shirkati",
+        image: career,
+        stafka: item.working_time,
+        actionType: item.typeof_working
+      }));
+      dispatch(workList(filteredList));
+      console.log(filteredList)
+      setModalSearch(false);
+
+    }).catch(function (error) {
+      console.error("Ma'lumot olish davomida bir hato ortaga chiqdi, iltimos qaytadan urinib ko'ring", error);
+    });
+  }
+
+
 
   return (
     <div
@@ -42,7 +108,7 @@ function Filter() {
         {/* City */}
         <div className="position-relative">
           <div className="filter-box">
-            <span>Shahar</span>
+            <span>{shahar}</span>
             {!dropdownCity ? (
               <img
                 src={city}
@@ -72,12 +138,10 @@ function Filter() {
           </div>
           {/* DROPDOWN */}
           {dropdownCity && (
-            <div className="dropdown position-absolute">
+            <div className="dropdown dropdown-city position-absolute">
               <ul>
-                <li>New York</li>
-                <li>London</li>
-                <li>Parij</li>
-                <li>Tashkent</li>
+                {cities.map((city, index) => (
+                  <li key={index} onClick={(event) => setShahar(event.target.innerText)}>{city}</li>))}
               </ul>
             </div>
           )}
@@ -85,7 +149,7 @@ function Filter() {
         {/* Work Type */}
         <div className="position-relative">
           <div className="filter-box">
-            <span>Ish turi</span>
+            <span>{ishTuru}</span>
             {!dropdownJobs ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -128,9 +192,9 @@ function Filter() {
           {dropdownJobs && (
             <div className="dropdown position-absolute">
               <ul>
-                <li>Remote</li>
-                <li>Half office</li>
-                <li>Office</li>
+                {jobTypes.map((job, index) => (
+                  <li key={index} onClick={(event) => setIsh(event.target.innerText)}>{job}</li>
+                ))}
               </ul>
             </div>
           )}
@@ -138,7 +202,7 @@ function Filter() {
         {/* Annotations Historiya */}
         <div className="position-relative">
           <div className="filter-box">
-            <span>E'lon tarixi</span>
+            <span>{elonTarihi}</span>
             {!dropdownHistoria ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -181,16 +245,15 @@ function Filter() {
           {dropdownHistoria && (
             <div className="dropdown position-absolute">
               <ul>
-                <li>Last 1 day</li>
-                <li>Last 1 week</li>
-                <li>Last 1 month</li>
-                <li>Last 1 year</li>
+                {histDates.map((date, index) => (
+                  <li key={index} onClick={(event) => setElonTarihi(event.target.innerText)}>{date}</li>
+                ))}
               </ul>
             </div>
           )}
         </div>
         {/* Search loading */}
-        <div className="position-relative">
+        <div className="position-relative" onClick={handleClick}>
           <div className="filter-box">
             <span>Qidirasizmi?</span>
             {!dropdown ? (
@@ -217,17 +280,7 @@ function Filter() {
               </svg>
             )}
           </div>
-          {/* DROPDOWN */}
-          {dropdown && (
-            <div className="dropdown position-absolute">
-              <ul>
-                <li>Last 1 day</li>
-                <li>Last 1 week</li>
-                <li>Last 1 month</li>
-                <li>Last 1 year</li>
-              </ul>
-            </div>
-          )}
+
         </div>
       </div>
 
@@ -268,6 +321,7 @@ function Filter() {
                       Key words:
                     </label>
                     <input
+                      onChange={(event) => setJobname(event.target.value)}
                       type="text"
                       className="form-control"
                       id="recipient-name"
@@ -286,7 +340,7 @@ function Filter() {
                 >
                   Close
                 </button>
-                <button type="button" className="btn btn-primary">
+                <button type="button" onClick={handleClick} className="btn btn-primary">
                   Search
                 </button>
               </div>
