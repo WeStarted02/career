@@ -24,3 +24,20 @@
     border: 2px solid rgb(23, 22, 22);
     padding: 8px;
 }
+
+.workDetail .container {
+    display: flex;
+    justify-content: flex-end; /* Butonu sağa hizalar */
+    padding: 10px;
+  }
+  
+  .right-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(6, 121, 222);
+    padding: 5px;
+    border-radius: 8px;
+    margin-left: 10px;
+  }
+  

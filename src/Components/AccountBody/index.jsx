@@ -5,6 +5,10 @@ function AccountBody({about}) {
   const bgColor = useSelector((state) => state.changeBgColor);
   const color = useSelector((state) => state.changeColor);
 
+  const handleButton = () =>{
+    window.location.href = "http://localhost:3000/"
+  }
+
   return (
     <div>
       <div className="container accountBody">
@@ -24,6 +28,7 @@ function AccountBody({about}) {
                   : { background: "#fff" }
               }
               className="btn-elon"
+              onClick={handleButton}
             >
               E'lonlar
             </button>
@@ -65,7 +70,7 @@ function AccountBody({about}) {
               <p className="ochiqlama">
                 Yuklagan ajoyib CV’laringiz bilan ish e’lonlariga topshiring
               </p>
-              <button>E'lonlar</button>
+              <button onClick={handleButton}>E'lonlar</button>
             </div>
             <button
               style={

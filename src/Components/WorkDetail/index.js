@@ -58,6 +58,7 @@ function WorkDeatil() {
             <p>-{work[0].loctaion}</p>
             <p>-{work[0].salary}$</p>
             <p className="aboutJob" dangerouslySetInnerHTML={{ __html: work[0].workAbout }}></p>
+            <div class="container"> <button class="right-button">Ariza topshiring</button> </div>
         </div>
     );
 }

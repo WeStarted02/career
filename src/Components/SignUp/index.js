@@ -9,14 +9,14 @@ function SignUp() {
 
     const [show, setShow] = useState(false);
     const [height, setHeight] = useState();
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
-    const [surname, setSurname] = useState();
-    const [name, setName] = useState();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [surname, setSurname] = useState("");
+    const [name, setName] = useState("");
 
     const seePassword = () => {
         const typeInput = document.getElementById("passwordInput").type;
-        if (typeInput == "text") {
+        if (typeInput === "text") {
             document.getElementById("password1Input").type = "password";
             document.getElementById("passwordInput").type = "password";
         } else {
@@ -24,38 +24,32 @@ function SignUp() {
             document.getElementById("passwordInput").type = "text";
         }
     }
-
     useEffect(() => {
-        setHeight(window.innerHeight)
-    })
-
+        setHeight(window.innerHeight);
+    }, []);
     function validate(email, password, username, fullname) {
         if (!fullname) {
             alert("To'liq ismingizni kiriting!");
             return false;
-        }
-        if (!username) {
+        } if (!username) {
             alert("Foydalanuvchi ismingizni kiriting!");
             return false;
-        }
-        if (!email) {
+        } if (!email) {
             alert("Emailngizni kiriting!");
             return false;
-        }
-        if (!password) {
+        } if (!password) {
             alert("Parolingizni kiriting!");
             return false;
         }
         return true;
     }
-
-
+   
+   
     const signUpFonk = async () => {
-        axios({
+        await axios({
             method: 'post',
             url: 'http://localhost:8080/add',
             data: {
-                id: 2,
                 name: name,
                 surname: surname,
                 email: email,
@@ -63,9 +57,14 @@ function SignUp() {
                 about: null
             }
         });
-        setShow(show ? false : true);
-    }
-
+        setShow(true);
+    };
+    const handleClick = () => {
+        const isValid = validate(email, password, name, surname);
+        if (isValid) {
+            signUpFonk();
+        }
+    };
 
     return (
         <div >
@@ -134,7 +133,7 @@ function SignUp() {
                             </div>
                         </div>
 
-                        <button className="btn btn-warning border border-secondary " onClick={signUpFonk} type="button">Sign Up</button>
+                        <button className="btn btn-warning border border-secondary " onClick={handleClick} type="button">Sign Up</button>
                         <a href="/signin" ><p className="text-center text-warning ">Do have an account ?</p></a>
                     </div>
 
